@@ -1,0 +1,146 @@
+<html>
+   <head>
+      <!--Required charset-->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+        
+        <!-- Bootstrap core CSS -->
+        <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Custom fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Josefin+Slab:100,300,400,600,700,100italic,300italic,400italic,600italic,700italic" rel="stylesheet" type="text/css">
+
+        <!-- Custom CSS -->
+        <link href="css/style.css" rel="stylesheet">
+        
+        <title>
+        Bookswala.com
+        </title>
+      
+      <script type="text/javascript">
+      function validate()
+      {
+          if( document.myForm.ISBN.value == "" ||
+         isNaN( document.myForm.ISBN.value ) ||
+         document.myForm.ISBN.value.length != 10 )
+         {
+            alert( "Please Enter Correct ISBN value" );
+            document.myForm.ISBN.focus() ;
+            return false;
+         }
+      
+         if( document.myForm.Bookname.value == "" )
+         {
+            alert( "Please provide Book name!" );
+            document.myForm.Bookname.focus() ;
+            return false;
+         }
+          
+          if( document.myForm.Bookauthor.value == "" )
+         {
+            alert( "Please provide Author name!" );
+            document.myForm.Bookauthor.focus() ;
+            return false;
+         }
+          if( document.myForm.Publisher.value == "" )
+         {
+            alert( "Please provide Publisher name!" );
+            document.myForm.Publisher.focus() ;
+            return false;
+         }
+          if( document.myForm.IURL.value == "" )
+         {
+            alert( "Please provide Image URL!" );
+            document.myForm.IURL.focus() ;
+            return false;
+         }
+          if( document.myForm.Price.value == "" )
+         {
+            alert( "Please provide Price!" );
+            document.myForm.Price.focus() ;
+            return false;
+         }
+          
+          if( document.myForm.Quantity.value == "" )
+         {
+            alert( "Please provide Quantity!" );
+            document.myForm.Quantity.focus() ;
+            return false;
+         }
+          return confirm('Do you really want to submit the form?');
+   
+      }
+</script>
+      
+   </head>
+   
+   <body class="container-fluid"background="images/hbg.jpg">
+              <div class="tagline-upper text-heading text-shadow mt-5 d-none d-lg-block">Bookswala.com</div>
+        <div class="tagline-lower text-expanded text-shadow text-uppercase mb-5 d-none d-lg-block">Great books, great deals.</div>
+        
+        <!--Navbar-->
+        <div >
+                <ul style="list-style: none;">
+                <li >
+                <a class="button" href="adminadd.html">Add Another Admin &nbsp;</a>
+                </li>
+                <li >
+                <a class="button" href="removeuser.html">Remove A User &nbsp;</a>
+                </li>
+                <li >
+                <a class="button" href="logout.php">Log Out &nbsp;</a>
+                </li>
+                <li>
+                <form action="adminshow.php" method="post" >
+                <input  class="button" type="submit" value="Show Books"> 
+                </form>
+                </li>
+                </ul>
+                
+        </div>
+        
+       <div class="container">
+                    
+                    <div class="tagline-lower text-expanded text-shadow text-uppercase  mb-5 d-none d-lg-block">Add Book Details here:</div>
+                    <form action="updatestock.php" name="myForm" onsubmit="return(validate(this));" method="post">
+                        <br>
+                        ISBN:
+                        <input type="text" name="ISBN"/>
+                        <br>
+                        <br>
+                        
+                        Book Title:
+                        <input type="text" name="Bookname" />
+                        <br>
+                        <br>
+           
+                        Book Author:
+                        <input type="text" name="Bookauthor" />
+                        <br>
+                        <br>
+            
+                        Publisher:
+                        <input type="text" name="Publisher" />
+                        <br>
+                        <br>
+                        
+                        Image URL:
+                        <input type="text" name="IURL" />
+                        <br>
+                        <br>
+                        
+                        Price:
+                        <input type="text" name="Price" />
+                        <br>
+                        <br>
+                        
+                        Quantity:
+                        <input type="number" name="Quantity" />
+                        <br>
+                        <br>
+                        <input type="submit" value="Update Stock" />
+                    </form>
+       </div>
+   </body>
+</html>

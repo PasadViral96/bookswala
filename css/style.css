@@ -1,0 +1,119 @@
+body 
+{
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: contain;
+    /*  background: url(/images/hbg.jpg);
+  background-color: #875b19; */
+}
+
+.body1 
+{
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: contain;
+  -o-background-size: contain;
+    /*  background: url(/images/hbg.jpg);
+  background-color: #875b19; */
+}
+
+h1, h2, h3, h4, h5, h6, .text-heading 
+{
+  font-family: "Josefin Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+h1 
+{
+  font-size: 4rem;
+}
+
+.tagline-upper 
+{
+  font-size: 5rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.tagline-lower 
+{
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+.text-expanded 
+{
+  letter-spacing: 2px;
+}
+
+.text-shadow 
+{
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.text-lg 
+{
+  font-size: 1.25rem;
+}
+
+.bg-faded 
+{
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.bg-overlay 
+{
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.button 
+{
+    display: block;
+    padding: 4px;
+    text-align: left;
+    border-radius: 0px;
+    color: black;
+    font-weight: bold;
+    border: 0px solid #ffffff;
+}
+
+
+.table 
+{
+    font-family: "Open Sans", Helvetica, Arial, sans-serif;
+    width: 100%;
+    align-content: center;
+    color: black;
+    font-weight: bold;
+    background-color:rgba(0, 0, 0, 0);
+}
+
+td
+{
+    border: 1px solid #ffffff;
+    text-align: center;
+    padding: 4px;
+    color: black
+}
+th
+{
+    border: 1px solid #ffffff;
+    text-align: center;
+    padding: 4px;
+    color: black
+}
+.anim
+{
+animation-name: bgchange;
+animation-duration: 4s;
+animation-iteration-count: infinite;
+}
+@keyframes bgchange
+{
+    0%   {background-color: #D7C8B2;}
+    25%  {background-color: #af9166;}
+    50%  {background-color: #875b19;}
+    100% {background-color: #613a00;}
+}
