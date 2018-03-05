@@ -30,7 +30,7 @@ session_start();
         <div >
                 <ul style="list-style: none;">
                 <li >
-                <a class="button" href="home2.html">Home &nbsp;</a>
+                <a class="button" href="home2.php">Home &nbsp;</a>
                 </li>
                 <li >
                 <a class="button" href="cart.php">Cart &nbsp;</a>

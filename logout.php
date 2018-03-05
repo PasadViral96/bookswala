@@ -30,7 +30,7 @@ session_unset();
 session_destroy(); 
 ?>
     <h3>You have Logged Out. Thank You for shopping with us. </h3>
-       <a class="button" href="home.html">Home</a>
+       <a class="button" href="home.php">Home</a>
     </body>
 </html>
                 

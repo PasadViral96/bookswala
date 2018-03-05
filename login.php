@@ -38,7 +38,7 @@
 	else if($row['UserName'] == $username && $row['Password'] == $password)
     {
         $_SESSION["uname"] = $username;
-		header("location:home2.html");
+		header("location:home2.php");
 	}
 	else
 		header("location:login.html");
