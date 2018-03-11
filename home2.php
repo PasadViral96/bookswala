@@ -13,10 +13,28 @@
 
         <!-- Custom CSS -->
         <link href="css/style.css" rel="stylesheet">
-        
+        <link rel="stylesheet" href="jquery-ui-1.11.4\jquery-ui.min.css">
+        <script src="jquery-ui-1.11.4\external\jquery\jquery.js"></script>
+        <script src="jquery-ui-1.11.4\jquery-ui.min.js"></script>
         <title>
         Bookswala.com
         </title>
+        <script>
+            $(document).ready(function(){
+                $('[data-toggle="tooltip"]').tooltip(); 
+            });
+        </script>
+        <script>
+            $(document).ready(function () {
+                $.ajax({
+                  url: 'AjaxFiles/rss_parser.php',
+                  complete: function (result, status) {
+                        document.getElementById('rss').innerHTML = result.responseText;
+                    },
+                  cache: false
+                });
+            });
+        </script>
     </head>
     
     <body class="container-fluid" background="images/hbg.jpg">
@@ -48,16 +66,21 @@
         </div>
         <div class="container">
             <div class="row">
-                <div class="col-sm-1">HUU</div>
-                <div class="col-sm-2">HUU</div>
-                <div class="col-sm-2">HUU</div>
-                <div class="col-sm-2">HUU</div>
-                <div class="col-sm-2">HUU</div>
-                <div class="col-sm-2">HUU</div>
-                <div class="col-sm-1">HUU</div>
+                <div class="col-lg-1"></div>
+                <div class="col-lg-10" id="rss-viewer-title-div">
+                    <h1 id="rss-viewer-title">Books News!<h1>    
+                </div>
+                <div class="col-lg-1"></div>
+            </div>
+            <div class="row">
+                <div class="col-lg-1"></div>
+                <div class="col-lg-10" id="rss-viewer-subtitle-div">
+                    <h5 id="rss-viewer-subtitle">Powered by BooksBrowse.<h5>    
+                </div>
+                <div class="col-lg-1"></div>
+            </div>
+            <div class="row" id="rss">
             </div>
         </div> 
-        
-    
     </body>
 </html>
