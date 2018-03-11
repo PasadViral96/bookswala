@@ -130,14 +130,18 @@ animation-iteration-count: infinite;
 }
 .rss-viewer
 {
-  border: 2px solid blue;
-  /* background-color: white; */
   border-radius: 5px;
   margin:12px;
   height: 40%;
   padding:10px;
-  box-shadow: 1px 3px;
+  box-shadow: 3px 3px 3px 3px;
 }
+
+.rss-viewer:hover
+{
+  box-shadow: 5px 5px 5px 5px;
+}
+
 .news-date
 {
   bottom: 8%;
