@@ -117,3 +117,29 @@ animation-iteration-count: infinite;
     50%  {background-color: #875b19;}
     100% {background-color: #613a00;}
 }
+
+#rss-viewer-title-div
+{
+  text-align: center;
+  border-bottom: 2px solid grey;
+}
+#rss-viewer-subtitle-div
+{
+  text-align: center;
+  padding-top: 1em
+}
+.rss-viewer
+{
+  border: 2px solid blue;
+  /* background-color: white; */
+  border-radius: 5px;
+  margin:12px;
+  height: 40%;
+  padding:10px;
+  box-shadow: 1px 3px;
+}
+.news-date
+{
+  bottom: 8%;
+  position: absolute;
+}
