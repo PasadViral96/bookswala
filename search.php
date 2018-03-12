@@ -42,8 +42,8 @@ session_start();
         </script>
 </head>
     <body  class="container-fluid"  background="images/hbg.jpg">
-<div class="tagline-upper text-heading text-shadow mt-5 d-none d-lg-block">Bookswala.com</div>
-        <div class="tagline-lower text-expanded text-shadow text-uppercase mb-5 d-none d-lg-block">Great books, great deals.</div>
+        <div class="tagline-upper text-heading text-shadow mt-5 d-none d-lg-block"><h1 style="font-size:5vw;"> Bookswala.com</h1></div>
+        <div class="tagline-lower text-expanded text-shadow mb-5 d-none d-lg-block"><h1 style="font-size:4vw;"> Great books, great deals.</h1></div>
 
         <!--Navbar-->
         <div >
