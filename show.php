@@ -72,6 +72,27 @@
                 </li>
                 </ul>
         </div>
+        <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div class="container">
+                <div class="row">
+                    <h2 id="selected-book-title"></h2>
+                </div>
+                <div class="row">
+                    <div class="col-lg-3">
+                        <img id="selected-book-thumbnail" />
+                    </div>
+                    <div class="col-lg-9" id="selected-book-details">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        </div>
 <?php
 
 $user ="root";
@@ -106,7 +127,12 @@ if ($result->num_rows > 0)
     while($row = mysqli_fetch_assoc($result))
     {
         echo "<a id='".$row["BookTitle"]."'><tr id='tablerow'>";
-        echo "<td><img src='" . $row["ImageURLS"] . "'></td>";
+        $isbn='"'.$row["ISBN"].'"';
+        $title='"'.$row["BookTitle"].'"';
+        $author='"'.$row["BookAuthor"].'"';
+        $pub='"'.$row["Publisher"].'"';
+        $price='"'.$row["Price"].'"';
+        echo "<td><img class='t' onclick='displayModal(".$isbn.",".$title.",".$author.",".$pub.",".$price.")' onerror='this.onerror=null;this.src=\"images/npw.jpg\";' src='" . $row["ImageURLS"] . "'></td>";
         echo "<td>" . $row["ISBN"] . "</td>";
         echo "<td>" . $row["BookTitle"] . "</td>";
         echo "<td>" . $row["BookAuthor"] . "</td>";
@@ -130,4 +156,50 @@ mysqli_close($conn);
 ?>
 
     </body>
+    <script>
+            // Get the modal
+            var modal = document.getElementById('myModal');
+
+            // Get the <span> element that closes the modal
+            var span = document.getElementById("close-btn");
+
+            // When the user clicks the button, open the modal 
+            function displayModal(isbn,title,author,publisher,price)
+            {
+                modal.style.display = "block";
+                var xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function()
+                {
+                    if (this.readyState == 4 && this.status == 200)
+                    {
+                        data = JSON.parse(this.responseText);
+                        document.getElementById("selected-book-title").innerHTML = title+": Book Details";
+                        document.getElementById("selected-book-thumbnail").src = data.items[0].volumeInfo.imageLinks.thumbnail;
+                        var d = "";
+                        d += "<b>Book Title:</b>"+title+"<br />";
+                        d += "<b>Book ISBN:</b>"+isbn+"<br />";
+                        d += "<b>Book author:</b>"+author+"<br />";
+                        d += "<b>Book publisher:</b>"+publisher+"<br />";
+                        d += "<b>Book published year:</b>"+data.items[0].volumeInfo.publishedDate+"<br />"; //Check.
+                        d += "<b>Book Description:</b>"+data.items[0].volumeInfo.description+"<br />";
+                        document.getElementById("selected-book-details").innerHTML = d;
+                    }
+                };
+                xhttp.open("GET", "https://www.googleapis.com/books/v1/volumes?q=isbn:"+isbn+"&key=AIzaSyDZcBQJBtqDYx46sHD8oZZkGg6xFX5yN54", true);
+                xhttp.send(); 
+            }
+
+            // When the user clicks on <span> (x), close the modal
+            function closeModal()
+            {
+                modal.style.display = "none";
+            }
+
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+        </script>
 </html>
