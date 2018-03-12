@@ -31,14 +31,14 @@ session_start();
         <div >
                 <ul style="list-style: none;">
                 <li >
-                <a class="button" href="home2.php">Home &nbsp;</a>
-                </li>
+                <a class="button" href="home2.php"> <button class="button btn-warning .btn-sm value="Home"> Home &nbsp;</a></button>
+                </li><br></br>
                 <li >
-                <a class="button" href="cart.php">Cart &nbsp;</a>
-                </li>
+                <a class="button" href="cart.php"> <button class="button btn-warning .btn-sm value="Cart"> Cart &nbsp;</a></button>
+                </li><br></br>
                 <li >
-                <a class="button" href="logout.php">Log Out &nbsp;</a>
-                </li>
+                <a class="button" href="logout.php"><button class="button btn-warning .btn-sm value="Log Out">Log Out &nbsp;</a></button>
+                </li><br></br>
                 <li>
                 <form action="show.php" method="post" >
                 <input  class="button" type="submit" value="Show Books"> 

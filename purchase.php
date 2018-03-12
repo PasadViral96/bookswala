@@ -30,20 +30,20 @@ session_start();
         <div >
                 <ul style="list-style: none;">
                 <li >
-                <a class="button" href="home2.php">Home &nbsp;</a>
+                <a class="button btn-info" href="home2.php">Home &nbsp;</a>
                 </li>
                 <li >
-                <a class="button" href="cart.php">Cart &nbsp;</a>
+                <a class="button btn-info" href="cart.php">Cart &nbsp;</a>
                 </li>    
                 <li >
-                <a class="button" href="wishlist.php">WishList &nbsp;</a>
+                <a class="button btn-info" href="wishlist.php">WishList &nbsp;</a>
                 </li>
                 <li >
-                <a class="button" href="logout.php">Log Out &nbsp;</a>
+                <a class="button btn-info" href="logout.php">Log Out &nbsp;</a>
                 </li>
                 <li>
                 <form action="show.php" method="post" >
-                <input  class="button" type="submit" value="Show Books"> 
+                <input  type="button" class="btn btn-info" class="button" type="submit" value="Show Books"> 
                 </form>
                 </li>
                 </ul>

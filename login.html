@@ -70,17 +70,17 @@
         <div class="tagline-upper text-heading text-shadow mt-5 d-none d-lg-block"><h1 style="font-size:5vw;"> Bookswala.com</h1></div>
         <div class="tagline-lower text-expanded text-shadow mb-5 d-none d-lg-block"><h1 style="font-size:4vw;"> Great books, great deals.</h1></div>
 
-        <!--Navbar-->
+       <!--Navbar-->
         <div >
                 <ul style="list-style: none;">
                 <li >
-                <a class="button" href="home.html">Home &nbsp;</a>
-                </li>
+                <a href="home.php"><button class="button btn-warning .btn-sm value="Home"> Home &nbsp;</a></button>
+                </li><br></br>
                 <li >
-                <a class="button" href="login.html">Log In &nbsp;</a>
-                </li>
-				<li >
-                <a class="button" href="register.html">Register &nbsp;</a>
+                <a href="login.html"><button class="button btn-warning .btn-sm value="Log In">Log In &nbsp;</a></button>
+                </li><br></br>
+                <li >
+                <a href="register.html"><button class="button btn-warning .btn-sm value="Resister">Register &nbsp;</a></button>
                 </li>
                 </ul>
                 
@@ -91,18 +91,17 @@
             
                     
                     <div class="tagline-lower text-expanded text-shadow text-uppercase  mb-5 d-none d-lg-block">Log In</div>
-                    <div class="tagline-lower text-expanded text-shadow text-uppercase  mb-5 d-none d-lg-block" id="loginstat"></div>
+                    <div class="tagline-lower text-expanded text-shadow mb-5 d-none d-lg-block" id="loginstat"></div>
                     <form action="login.php" name="myForm" onsubmit="return(validate());" method="post">
                         UserName: 
                         <input type="text" name="uname" />
                         <br>
                         <br>
-            
                         Password:
                         <input type="password" onkeyup="validateUsernamePass()" name="pass" />
                         <br>
                         <br>
-                        <input type="submit" id="login" value="Log In" />
+                        <input type="submit" type="button" class="btn btn-info" id="login" value="Log In">
                     </form>
                     
                  
