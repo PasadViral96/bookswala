@@ -4,8 +4,9 @@
         <!--Required charset-->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
-        
-        <!-- Bootstrap core CSS -->
+<!--        <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+
+        <!-- Bootstrap core CSS
         <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
         <!-- Custom fonts -->
@@ -19,22 +20,22 @@
         Bookswala.com
         </title>
     </head>
-    
+<!--     <h1 style="font-size:10vw;">Responsive Text</h1> -->
     <body class="container-fluid" background="images/hbg.jpg">
-        <div class="tagline-upper text-heading text-shadow mt-5 d-none d-lg-block">Bookswala.com</div>
-        <div class="tagline-lower text-expanded text-shadow text-uppercase mb-5 d-none d-lg-block">Great books, great deals.</div>
+        <div class="tagline-upper text-heading text-shadow mt-5 d-none d-lg-block"><h1 style="font-size:5vw;"> Bookswala.com</h1></div>
+        <div class="tagline-lower text-expanded text-shadow mb-5 d-none d-lg-block"><h1 style="font-size:4vw;"> Great books, great deals.</h1></div>
         
         <!--Navbar-->
         <div >
                 <ul style="list-style: none;">
                 <li >
-                <a class="button" href="home.html">Home &nbsp;</a>
+                <a class="button" href="home.html">Home&nbsp;</a>
                 </li>
                 <li >
-                <a class="button" href="login.html">Log In &nbsp;</a>
+                <a class="button" href="login.html">Log In&nbsp;</a>
                 </li>
-				<li >
-                <a class="button" href="register.html">Register &nbsp;</a>
+                <li >
+                <a class="button" href="register.html">Register&nbsp;</a>
                 </li>
                 </ul>
                 

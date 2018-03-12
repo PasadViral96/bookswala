@@ -45,25 +45,21 @@
 <div class="tagline-upper text-heading text-shadow mt-5 d-none d-lg-block">Bookswala.com</div>
         <div class="tagline-lower text-expanded text-shadow text-uppercase mb-5 d-none d-lg-block">Great books, great deals.</div>
 
-        <!--Navbar-->
+               <!--Navbar-->
         <div >
                 <ul style="list-style: none;">
                 <li>
-                <a class="button" href="home2.php">Home</a>
+                 <a class="button btn-info" href="home2.php"><button class="button btn-warning .btn-sm value="Home"> Home</a></button>
                 </li>
+                <br></br>
                 <li>
-                <a class="button" href="wishlist.php">WishList</a>
-                </li>
+                <a class="button" href="wishlist.php"><button class="button btn-warning .btn-sm value="Wish List"> WishList</a></button>
+                </li><br></br>
                 <li>
-                <a class="button" href="cart.php">Cart</a>
-                </li>
+                <a class="button" href="cart.php"><button class="button btn-warning .btn-sm value="Cart">Cart</a></button>
+                </li><br></br>
                 <li>
-                <a class="button" href="logout.php">Log Out</a>
-                </li>
-                <li>
-                <form action="show.php" method="post" >
-                <input  class="button" type="submit" value="Show Books">
-                </form>
+                <a class="button" href="logout.php"><button class="button btn-warning .btn-sm value="Log Out">Log Out</a></button>
                 </li>
                 <li>Search Books:<form action="search.php" method="post">
                     <input type="text" placeholder="Name" id="book-name" onkeyup="getBookName()" name="search">
